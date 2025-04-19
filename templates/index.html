@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NAVKAR Inspired Bank - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bank.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo">NAVKAR Bank</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to NAVKAR Inspired Banking</h1>
+      <p>Your trusted financial partner</p>
+      <a href="{{ url_for('register') }}" class="cta-button">Open an Account</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 NAVKAR Inspired Bank. All rights reserved.
+  </footer>
+</body>
+</html>

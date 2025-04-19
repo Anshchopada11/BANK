@@ -1,0 +1,259 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f1f3f6;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #004c93;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #004c93;
+  padding: 80px 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #d62300;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #b91c00;
+}
+
+/* Login/Register Section */
+.login {
+  padding: 60px 30px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.login h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #c6cbd1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  background-color: #004c93;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #003a75;
+}
+
+.login-link a {
+  color: #d62300;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 60px 30px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.dashboard h2 {
+  margin-bottom: 40px;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #f4f6f8;
+  padding: 25px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.box h3 {
+  color: #004c93;
+  margin-bottom: 10px;
+}
+
+.box ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f4f4f4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+/* Add Money & Send Money Pages */
+.money-action {
+  padding: 60px 30px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.money-action h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #004c93;
+}
+
+.money-action form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.money-action input[type="number"],
+.money-action input[type="text"] {
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #c6cbd1;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.money-action button {
+  background-color: #004c93;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.money-action button:hover {
+  background-color: #003a75;
+}
+
+.money-action a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #d62300;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.money-action a:hover {
+  text-decoration: underline;
+}
+

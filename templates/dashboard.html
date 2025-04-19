@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bank.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f1f1f1;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .balance {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        .cta-button, .logout-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #0275d8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #025aa5;
+        }
+
+        .logout-button {
+            background-color: #d9534f;
+        }
+
+        .logout-button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome, {{ username }}!</h2>
+    <p class="balance">Your current balance: ₹{{ balance }}</p>
+
+    <!-- Added action buttons -->
+    <a href="{{ url_for('add_money') }}" class="cta-button">Add Money</a>
+    <a href="{{ url_for('send_money') }}" class="cta-button">Send Money</a>
+
+    <!-- Logout Button -->
+    <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+
+</body>
+</html>

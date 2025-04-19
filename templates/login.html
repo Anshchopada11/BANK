@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - NAVKAR Bank</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bank.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo">NAVKAR Bank</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="login">
+    <h2>Customer Login</h2>
+    <form action="{{ url_for('login') }}" method="POST">
+      <input type="text" name="username" placeholder="Customer ID" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p class="login-link"><a href="#">Forgot Password?</a></p>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 NAVKAR Inspired Bank. All rights reserved.
+  </footer>
+</body>
+</html>

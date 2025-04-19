@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Send Money</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bank.css') }}">
+</head>
+<body>
+
+  <div class="money-action">
+    <h2>Send Money</h2>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flash-messages">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('send_money') }}">
+      <input type="text" name="recipient" placeholder="Recipient Username" required>
+      <input type="number" name="amount" step="0.01" placeholder="Amount to send" required>
+      <button type="submit">Send Money</button>
+    </form>
+
+    <a href="{{ url_for('dashboard') }}" class="back-link">Back to Dashboard</a>
+  </div>
+
+</body>
+</html>
